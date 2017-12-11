@@ -7,11 +7,11 @@ from matplotlib import pyplot as plt
 cv.findContours()
 参数一：输入图像
 参数二：轮廓检索模式
-参数三：轮廓近似方法（cv.CHAIN_APPROX_NONE/SIMPLE
+参数三：轮廓近似方法（cv.CHAIN_APPROX_NONE/SIMPLE）
 后者不保存所有值
 返回参数一：图像
 参数二：Python列表，包含轮廓坐标
-参数三：；轮廓层析结构
+参数三：轮廓层析结构
 
 轮廓之绘制轮廓
 cv.drawContours()
