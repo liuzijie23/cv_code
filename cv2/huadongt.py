@@ -10,7 +10,7 @@ def nothing(x):
 img=np.zeros((300,512,3),np.uint8)
 cv2.namedWindow('image')
 
-#创建三个个滑动条，范围都是0~255，回掉函数是 nothing
+#创建三个滑动条，范围都是0~255，回掉函数是 nothing
 cv2.createTrackbar('R','image',0,255,nothing)
 cv2.createTrackbar('G','image',0,255,nothing)
 cv2.createTrackbar('B','image',0,255,nothing)
