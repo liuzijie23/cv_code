@@ -11,23 +11,26 @@ import cv2 as cv
 #cvArray、cvMat、IplImage
 green = np.uint8([[[0,255,0]]])
 hsv_green = cv.cvtColor(green,cv.COLOR_BGR2HSV)
-
+a = 0
+b = 0
 cap = cv.VideoCapture(0)
 
 while(1):
 	#捕获一帧数据
 	ret,frame = cap.read()
-	#转换到HSV颜色空间
+	#高斯滤波后转换到HSV颜色空间
+	frame = cv.GaussianBlur(frame,(11,11),0)
 	hsv = cv.cvtColor(frame,cv.COLOR_BGR2HSV)
 	#设定蓝色阈值
-	lower_blue = np.array([20,150,50])
-	upper_blue = np.array([100,255,255])
+	lower = np.array([0,125,75])
+	upper = np.array([25,255,255])
 	#根据阈值构建掩模
-	mask = cv.inRange(hsv,lower_blue,upper_blue)
+	mask = cv.inRange(hsv,lower,upper)
 	#对原图像和掩模进行按位运算（黑：0，白：1）
 	res = cv.bitwise_and(frame,frame,mask = mask)
-	a = np.sum(np.argsort(np.sum(mask,axis = 0))[-5:-1])//4
-	b = np.sum(np.argsort(np.sum(mask,axis = 1))[-5:-1])//4
+	#计算得到新的坐标，先加6倍再除以10减少抖动
+	a = (np.sum(np.argsort(np.sum(mask,axis = 0))[-5:-1])+6*a)//10
+	b = (np.sum(np.argsort(np.sum(mask,axis = 1))[-5:-1])+6*b)//10
 	#print(a,b)
 	#显示图像
 	#	cv.imshow('frame',frame)
