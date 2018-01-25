@@ -67,6 +67,7 @@ def find(lower,upper,k):
 	
 while(1):
 	try:
+		#根据传入颜色和边数寻找对应的物体
 		find(lower_yellow,upper_yellow,3)
 	except:
 		pass
