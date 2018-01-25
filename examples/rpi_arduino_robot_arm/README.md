@@ -6,4 +6,4 @@
 
 ## 调试图片
 ![image](https://github.com/liuzijie23/cv_code/blob/master/examples/rpi_arduino_robot_arm/test.jpg)
-![image](https://github.com/liuzijie23/cv_code/blob/master/examples/rpi_arduino_robot_arm/test2.jpg)
+![image](https://github.com/liuzijie23/cv_code/blob/master/examples/rpi_arduino_robot_arm/test2.png)
