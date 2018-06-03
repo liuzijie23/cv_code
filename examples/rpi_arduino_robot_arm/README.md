@@ -1,3 +1,5 @@
+## 物块分拣机械臂
+机械臂会根据物体的颜色和形状分拣。也可以指定机械臂抓取某一种颜色和形状的物块
 ## 原理图
 ![image](https://github.com/liuzijie23/cv_code/blob/master/examples/rpi_arduino_robot_arm/schematic_circuits.PNG)
 
