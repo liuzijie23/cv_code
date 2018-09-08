@@ -11,7 +11,7 @@
 <h2 id="1">学习资源</h2>
 
 >- [官方文档(英文版)](http://opencv-python->tutroals.readthedocs.io/en/latest/py_tutorials/py_setup/py_table_of_contents_se>tup/py_table_of_contents_setup.html#)
->- [OpenCV安装包和电子书](http://pan.baidu.com/s/1qXASnko)
+>- [OpenCV安装包和电子书](https://pan.baidu.com/s/1s9z5SeRN1tbxWWV44iN-Mg)
 
 <h2 id="2">说明</h2>
 
